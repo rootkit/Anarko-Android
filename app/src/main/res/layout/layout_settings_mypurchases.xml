@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/item_settingMypurchases"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/item_purchases_imageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+        <com.oppous.anarko.classes.AKTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="test"
+            android:textAlignment="center"
+            android:textColor="@color/colorAKText"
+            android:textSize="@dimen/textsize_12"
+            android:layout_marginLeft="10px"
+            android:layout_marginRight="10px"
+            android:id="@+id/item_purchases_lblName"
+            app:font_name="@string/font_roboto"/>
+
+    </LinearLayout>
+
+</LinearLayout>

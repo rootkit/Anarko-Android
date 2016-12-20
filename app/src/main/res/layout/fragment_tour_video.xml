@@ -1,0 +1,40 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.oppous.anarko.fragments.TourVideoFragment"
+    android:background="@color/colorAKBackground">
+
+    <com.oppous.anarko.classes.AKTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tour_videoTour"
+        android:textAlignment="center"
+        android:textColor="@color/colorAKText"
+        android:layout_gravity="center"
+        android:textSize="@dimen/textsize_18"
+        app:font_name="@string/font_gunplay"
+        />
+    <VideoView
+        android:id="@+id/fragment_tourVideo_videoView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAKNoAlpha"
+        />
+
+    <com.oppous.anarko.classes.AKTextView
+        android:id="@+id/fragment_tourVideo_btnSkip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="SKIP"
+        android:layout_marginRight="30dp"
+        android:textColor="@color/colorAKButton"
+        android:textSize="@dimen/textsize_44pt"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="20dp"
+        android:onClick="onSkipTourVideo"
+        app:font_name="@string/font_gunplay" />
+
+</FrameLayout>

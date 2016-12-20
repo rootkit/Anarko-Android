@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorAKBackground"
+    tools:context="com.oppous.anarko.SettingsFeedbackActivity"
+    >
+
+    <!-- Top Bar -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <com.oppous.anarko.classes.AKTextView
+            android:id="@+id/activity_feedback_btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAKButton"
+            android:text="@string/top_cancel"
+            android:textSize="@dimen/textsize_20"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="30px"
+            android:shadowColor="@color/colorAKShadow"
+            android:shadowRadius="10"
+            app:font_name="@string/font_gunplay"/>
+
+        <com.oppous.anarko.classes.AKTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/feedback_title"
+            android:layout_marginTop="25dp"
+            android:textAlignment="center"
+            android:textSize="@dimen/textsize_22"
+            android:textColor="@color/colorAKText"
+            android:shadowColor="@color/colorAKShadow"
+            android:shadowRadius="10"/>
+
+        <com.oppous.anarko.classes.AKTextView
+            android:id="@+id/activity_feedback_btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAKButton"
+            android:text="@string/top_send"
+            android:textSize="@dimen/textsize_20"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="30px"
+            android:shadowColor="@color/colorAKShadow"
+            android:shadowRadius="10"
+            app:font_name="@string/font_gunplay"/>
+
+    </FrameLayout>
+
+    <!-- Middle -->
+    <FrameLayout
+        android:id="@+id/activity_settings_layoutFeedback"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        >
+
+        <EditText
+            android:id="@+id/activity_feedback_txtFeedBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/colorAKText"
+            android:hint="@string/feedback_hint"
+            android:textColorHint="@color/colorAKLightGrey"
+            android:textSize="@dimen/textsize_16"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/colorAKNoAlpha"
+            android:shadowColor="@color/colorAKShadow"
+            android:shadowRadius="10"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="10dp"
+            android:text="@string/feedback_consult"
+            android:textColor="@color/colorAKLightGrey"
+            android:textAlignment="center"
+            android:shadowColor="@color/colorAKShadow"
+            android:shadowRadius="10"
+            />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="top">
+
+            <com.oppous.anarko.classes.AKTextView
+                android:id="@+id/activity_feedback_btnPrivacy"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:textSize="@dimen/textsize_16"
+                android:text="@string/feedback_privacy"
+                android:textColor="@color/colorAKButton"
+                android:textAlignment="center"
+                android:layout_gravity="left|bottom"
+                android:shadowColor="@color/colorAKShadow"
+                android:shadowRadius="10"
+                app:font_name="@string/font_gunplay"
+                />
+
+            <com.oppous.anarko.classes.AKTextView
+                android:id="@+id/activity_feedback_btnTerms"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:textSize="@dimen/textsize_16"
+                android:text="@string/feedback_terms"
+                android:textColor="@color/colorAKButton"
+                android:textAlignment="center"
+                android:layout_gravity="center_vertical|bottom"
+                android:shadowColor="@color/colorAKShadow"
+                android:shadowRadius="10"
+                app:font_name="@string/font_gunplay"
+                />
+
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

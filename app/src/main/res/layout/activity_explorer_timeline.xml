@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.oppous.anarko.ExplorerTimelineActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.oppous.anarko.RecyclerView.RecyclerViewPager
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorAKBackground"/>
+
+    </FrameLayout>
+
+    <com.oppous.anarko.classes.AKTextView
+        android:id="@+id/activity_timeline_btnRelated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="60dp"
+        android:text="@string/timeline_related_videos"
+        android:textColor="@color/colorAKButtonYellow"
+        android:textSize="@dimen/textsize_16"
+        android:textAlignment="textEnd"
+        android:visibility="gone"
+        app:font_name="@string/font_gunplay"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/activity_timeline_btn_views"
+                android:src="@mipmap/icon_views"
+                android:layout_gravity="center_vertical" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="100"
+                android:id="@+id/activity_timeline_labelCounts"
+                android:textColor="@color/colorAKIcon"
+                android:textSize="@dimen/textsize_18"
+                android:shadowColor="@color/colorAKShadow"
+                android:shadowRadius="10"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/activity_timeline_btn_camera"
+            android:src="@mipmap/btn_camera"
+            android:layout_gravity="center"/>
+
+        <FrameLayout
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical|right">
+
+            <com.oppous.anarko.classes.AKTextView
+                android:id="@+id/activity_timeline_btn_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/colorAKNoAlpha"
+                android:text="@string/preview_share"
+                android:textColor="@color/colorAKIcon"
+                android:textSize="@dimen/textsize_18"
+                android:shadowColor="@color/colorAKShadow"
+                android:shadowRadius="10"
+                app:font_name="@string/font_gunplay"/>
+
+        </FrameLayout>
+
+
+    </FrameLayout>
+
+    <!-- Search -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/activity_timeline_container_search"
+        android:background="@color/colorAKBackgroundTrans"
+        android:layout_marginTop="0dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_vertical|center_horizontal">
+
+            <TextView
+                android:id="@+id/activity_timeline_btn_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/timeline_search"
+                android:textColor="@color/colorAKText"
+                android:textSize="@dimen/textsize_18"
+                android:layout_marginBottom="15dp"
+                android:shadowColor="@color/colorAKShadow"
+                android:shadowRadius="10"/>
+
+            <EditText
+                android:id="@+id/activity_timeline_txt_search"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:imeOptions="actionSearch"
+                android:ems="10"
+                android:background="@android:color/transparent"
+                android:textSize="@dimen/textsize_18"
+                android:textColor="@color/colorAKText"
+                android:textAlignment="center"
+                android:textColorHint="@color/colorAKDarkGrey"
+                android:hint="@string/timeline_search_hint" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/activity_timeline_btn_comments"
+        android:src="@mipmap/btn_comments" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/activity_timeline_btn_explorer"
+        android:layout_gravity="top|center_horizontal"
+        android:src="@mipmap/btn_logo" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAKDeactiveElement"
+        android:id="@+id/activity_timeline_container_download"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:background="@color/colorAKRed"
+                android:id="@+id/activity_timeline_container_status"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/timeline_no_internet_connection"
+                    android:id="@+id/textView"
+                    android:textColor="@color/colorAKText"
+                    android:layout_margin="10dp"
+                    android:textSize="@dimen/textsize_18"
+                    android:shadowColor="@color/colorAKShadow"
+                    android:shadowRadius="10"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.oppous.anarko.classes.AKProgressBar
+            android:id="@+id/activity_timeline_progressbar_refresh"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:pbSpinSpeed="3dp"
+            android:layout_gravity="center"
+            android:visibility="visible" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/activity_timeline_container_fragment"
+        android:visibility="gone">
+
+    </FrameLayout>
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/activity_timeline_progressbar_upload"
+        android:max="100"
+        android:progress="45"
+        android:visibility="visible"
+        android:progressTint="@color/colorAKButton" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAKRed"
+        android:id="@+id/activity_timeline_container_tryagain"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_gravity="center"
+            android:id="@+id/activity_timeline_btn_tryagain"
+            android:onClick="onTryAgain">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView11"
+                android:src="@mipmap/icon_reupload"
+                android:layout_marginRight="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/activity_timeline_label_tryagain"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center"
+                android:text="@string/timeline_try_again"
+                android:textColor="@color/colorAKText"
+                android:textSize="@dimen/textsize_18"
+                android:shadowColor="@color/colorAKShadow"
+                android:shadowRadius="10"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</FrameLayout>

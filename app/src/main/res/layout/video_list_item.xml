@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.oppous.anarko.VideoList.TextureVideoView
+            android:id="@+id/video_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/video_cover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/video_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textSize="16sp"
+        android:textColor="@color/colorAKText"
+        android:layout_centerInParent="true"/>
+
+    <FrameLayout
+        android:id="@+id/video_layout_load"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAKDeactiveElement"
+        android:visibility="gone">
+
+        <com.oppous.anarko.classes.AKProgressBar
+            android:id="@+id/video_progressBar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:pbSpinSpeed="3dp"
+            android:layout_gravity="center"
+            android:visibility="visible" />
+
+    </FrameLayout>
+
+</RelativeLayout>

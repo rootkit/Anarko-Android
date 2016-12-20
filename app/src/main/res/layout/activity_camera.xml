@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".CamCaptureActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/activity_camera_preview_container">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:id="@+id/activity_camera_container_buttons">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/activity_camera_btn_switchcamera"
+            android:src="@mipmap/btn_change_camera"
+            android:layout_gravity="center_vertical"
+            android:onClick="onSwitchCamera" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/activity_camera_btn_explorer"
+            android:src="@mipmap/btn_logo"
+            android:layout_gravity="center"
+            android:onClick="onExplorer" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/activity_camera_btn_flash"
+            android:src="@mipmap/btn_flash_disabled"
+            android:layout_gravity="center_vertical|right"
+            android:onClick="onFlash" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:visibility="visible"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="180dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="buy 5.00$"
+                android:id="@+id/activity_camera_btn_buy"
+                android:textColor="@color/colorAKButton"
+                android:background="@color/colorAKNoAlpha"
+                android:textSize="@dimen/textsize_24"
+                android:visibility="gone"
+                android:onClick="onBuy"
+                android:shadowColor="@color/colorAKShadow"
+                android:shadowRadius="10"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_horizontal"
+            android:weightSum="1"
+            android:layout_marginBottom="110dp"
+            android:layout_gravity="bottom|center_horizontal">
+
+            <com.oppous.anarko.classes.CircleProgressView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@mipmap/btn_camera_enabled"
+                app:duration="5"
+                android:id="@+id/activity_camera_btn_progress" />
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/activity_camera_btn_record"
+                android:layout_gravity="center"
+                android:src="@mipmap/btn_camera_normal"
+                android:onClick="onRecord" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/colorAKContainerGrey"
+            android:id="@+id/activity_camera_container_mask"
+            android:layout_gravity="bottom|center_horizontal">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/capture_break_it"
+                    android:id="@+id/activity_camera_label_break"
+                    android:textSize="@dimen/textsize_18"
+                    android:textColor="@color/colorAKText"
+                    android:shadowColor="@color/colorAKShadow"
+                    android:shadowRadius="10"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/activity_camera_btn_break"
+                    android:src="@mipmap/icon_store"
+                    android:scaleType="centerCrop"
+                    android:onClick="onStore"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp">
+
+                <com.oppous.anarko.classes.HorizontalListView
+                    android:id="@+id/activity_camera_listview_mask"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>

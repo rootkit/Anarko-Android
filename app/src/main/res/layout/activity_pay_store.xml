@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAKBackground"
+    android:orientation="vertical"
+    tools:context=".PayStoreActivity">
+
+    <!-- Header -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/activity_store_imgItem"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/glass_break"/>
+
+        <!-- Top Bar -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/activity_store_btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@mipmap/btn_back"/>
+
+            <ImageView
+                android:id="@+id/activity_store_btnExplorer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/btn_logo"
+                android:layout_gravity="center_horizontal"
+                />
+
+            <ImageView
+                android:id="@+id/activity_store_btnSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/btn_settings"
+                android:layout_gravity="right|center_vertical"/>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="30dp">
+
+            <com.oppous.anarko.classes.AKTextView
+                android:id="@+id/activity_store_lblItemName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BOZZ THE CLOWN"
+                android:textSize="@dimen/textsize_22"
+                android:textColor="@color/colorAKText"
+                app:font_name="@string/font_gunplay"/>
+
+            <com.oppous.anarko.classes.AKTextView
+                android:id="@+id/activity_store_lblBonusName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="+CARNIVAL"
+                android:textSize="@dimen/textsize_20"
+                android:textColor="@color/colorAKText"
+                app:font_name="@string/font_gunplay"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="30dp">
+
+            <com.oppous.anarko.classes.AKTextView
+                android:id="@+id/activity_store_btnBuy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"
+                android:text="BUY"
+                android:textSize="@dimen/textsize_22"
+                android:textColor="@color/colorAKButton"
+                app:font_name="@string/font_gunplay"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.oppous.anarko.classes.AKTextView
+                    android:id="@+id/activity_store_lblItemCost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="9.99$"
+                    android:textSize="@dimen/textsize_20"
+                    android:textColor="@color/colorAKText"
+                    android:textAlignment="textEnd"
+                    app:font_name="@string/font_gunplay"/>
+
+                <com.oppous.anarko.classes.AKTextView
+                    android:id="@+id/activity_store_lblBonusCost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2.99$"
+                    android:textSize="@dimen/textsize_20"
+                    android:textColor="@color/colorAKText"
+                    android:textAlignment="textEnd"
+                    app:font_name="@string/font_gunplay"/>
+
+                <com.oppous.anarko.classes.AKTextView
+                    android:id="@+id/activity_store_lblTotalCost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="12.98$"
+                    android:textSize="@dimen/textsize_20"
+                    android:textColor="@color/colorAKButton"
+                    android:textAlignment="textEnd"
+                    app:font_name="@string/font_gunplay"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+    <!-- Items -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="0dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <com.oppous.anarko.classes.AKSwitchButton
+                    android:id="@+id/activity_store_switcher"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/switch_textcolor_selector"
+                    app:sw_checkedColor="@color/colorAKButton"
+                    app:sw_strokeColor="@color/colorAKButton"
+                    app:sw_switchCount="2"
+                    app:sw_textArray="@array/purchase_category" />
+
+                <TextView
+                    android:layout_width="2px"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorAKButtonDisable"
+                    android:layout_gravity="center"/>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <GridView
+                    android:id="@+id/activity_store_gridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:columnWidth="90dp"
+                    android:numColumns="3"
+                    android:verticalSpacing="10dp"
+                    android:horizontalSpacing="10dp"
+                    android:stretchMode="columnWidth"
+                    android:layout_weight="1"
+                    android:scrollbarStyle="insideInset">
+
+                </GridView>
+
+                <com.oppous.anarko.classes.AKTextView
+                    android:id="@+id/activity_store_btnEarn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="@dimen/textsize_42pt"
+                    android:text="@string/store_earn"
+                    android:textColor="@color/colorAKButton"
+                    android:textAlignment="center"
+                    android:layout_gravity="center_vertical|bottom"
+                    android:layout_margin="10dp"
+                    android:layout_weight="4"
+                    android:onClick="onEarnItems"
+                    android:shadowColor="@color/colorAKShadow"
+                    android:shadowRadius="10"
+                    app:font_name="@string/font_gunplay"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+</LinearLayout>

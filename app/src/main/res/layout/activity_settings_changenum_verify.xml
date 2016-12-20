@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAKBackground"
+    tools:context=".SettingsChangeNumVerifyActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Top Bar -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <com.oppous.anarko.classes.AKTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fragment_changeNum_btnCancel"
+                android:textColor="@color/colorAKButton"
+                android:text="@string/top_cancel"
+                android:textSize="@dimen/textsize_42pt"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="30px"
+                android:shadowColor="@color/colorAKShadow"
+                android:shadowRadius="10"
+                app:font_name="@string/font_gunplay"/>
+
+            <com.oppous.anarko.classes.AKTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="+58 235 56 78"
+                android:textAlignment="center"
+                android:textSize="@dimen/textsize_22"
+                android:textColor="@color/colorAKText"
+                android:layout_gravity="center"
+                android:shadowColor="@color/colorAKShadow"
+                android:shadowRadius="10"
+                />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/changeNum_content6"
+                    android:textColor="@color/colorAKText"
+                    android:textAlignment="center"
+                    android:layout_marginTop="50dp"
+                    android:shadowColor="@color/colorAKShadow"
+                    android:shadowRadius="10"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/changeNum_content7"
+                    android:textColor="@color/colorAKText"
+                    android:textAlignment="center"
+                    android:layout_marginTop="50dp"
+                    android:shadowColor="@color/colorAKShadow"
+                    android:shadowRadius="10"
+                    />
+
+                <com.oppous.anarko.classes.GridPasswordView
+                    android:id="@+id/activity_phoneverify_txtSMSpswd"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@drawable/gridpassword_bg"
+                    android:shadowColor="@color/colorAKShadow"
+                    android:shadowRadius="10"
+                    app:gpvLineColor="@color/colorAKBackground"
+                    app:gpvLineWidth="5dp"
+                    app:gpvTextColor="@color/colorAKText"
+                    app:gpvTextSize="25sp"
+                    app:gpvPasswordLength="7"
+                    app:gpvGridColor="@color/colorAKDarkGrey"/>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <com.oppous.anarko.classes.AKTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/activity_changeNum_btnResend"
+                        android:textColor="@color/colorAKButton"
+                        android:text="@string/changeNum_resend"
+                        android:textSize="@dimen/textsize_16"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginLeft="50px"
+                        android:onClick="onResend"
+                        android:shadowColor="@color/colorAKShadow"
+                        android:shadowRadius="10"
+                        app:font_name="@string/font_gunplay"/>
+
+                    <com.oppous.anarko.classes.AKTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/activity_changeNum_btnCall"
+                        android:textColor="@color/colorAKButton"
+                        android:text="@string/changeNum_call"
+                        android:textSize="@dimen/textsize_16"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="50px"
+                        android:onClick="onCall"
+                        android:shadowColor="@color/colorAKShadow"
+                        android:shadowRadius="10"
+                        app:font_name="@string/font_gunplay"/>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/activity_changeNum_layoutProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/colorAKBackgroundTrans">
+
+        <com.oppous.anarko.classes.AKProgressBar
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@color/colorAKBackground"
+            android:layout_gravity="center"
+            android:id="@+id/activity_changeNum_progress"
+            app:pbTitle="@string/changeNum_loading_Title"
+            app:pbTitleTextColor="@color/colorAKText"
+            app:pbTitleTextSize="18dp"
+            app:pbContent="+58 234 56 78"
+            app:pbContentTextColor="@color/colorAKText"
+            app:pbContentTextSize="16dp"
+            app:pbSpinSpeed="3dp"/>
+
+    </FrameLayout>
+
+</FrameLayout>

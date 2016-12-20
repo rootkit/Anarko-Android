@@ -1,0 +1,207 @@
+<resources>
+    <string name="app_name">Anarko</string>
+
+    <!-- FontNames -->
+    <string name="font_gunplay">fonts/gunplay.ttf</string>
+    <string name="font_roboto">fonts/Roboto-Condensed.ttf</string>
+
+    <!-- CountryPicker -->
+    <string name="search">Search&#8230;</string>
+    <string name="no_sim_detected">No sim card detected.</string>
+
+    <!-- Reg Verification -->
+    <string name="appName">ANARKO</string>
+    <string name="verify_wrongCode">WRONG CODE</string>
+    <string name="verify_human">Verify you\'re a human</string>
+    <string name="verify_sendCode">SEND ACTIVATION CODE</string>
+    <string name="verify_enterCode">ENTER ACTIVATION CODE</string>
+    <string name="verify_noProfile">No profile required</string>
+    <string name="verify_description">By entering the activation code\nI agree the terms and conditions</string>
+    <string name="verify_terms">TERMS AND POLICY</string>
+
+    <!-- Tour -->
+    <string name="tour_watchTour">WATCH TOUR</string>
+    <string name="tour_skip">SKIP</string>
+    <string name="tour_content1_a">A N O N Y M O U S</string>
+    <string name="tour_content1_b">V I D E O S</string>
+    <string name="tour_content2_a">P L A Y  W I T H  C R A Z Y</string>
+    <string name="tour_content2_b">M A R K S  &amp;  E F F E C T S</string>
+    <string name="tour_content3_a">S E E  W H A T \' S  H A P P E N I N G</string>
+    <string name="tour_content3_b">O N  T H E  W O R L D</string>
+    <string name="tour_content4_a">B E  Y O U R  O W N</string>
+    <string name="tour_content4_b">A N O N Y M O U S  H E R O</string>
+    <string name="tour_videoTour">A N A R K O V I D E O\nT O U R</string>
+
+    <!-- Settings Main -->
+    <string name="settings">Settings</string>
+    <string name="settings_notification">NOTIFICATIONS</string>
+    <string name="settings_payments">PAYMENTS</string>
+    <string name="settings_purchases">MY PURCHASES</string>
+    <string name="settings_changeNumber">CHANGE NUMBER</string>
+    <string name="settings_guideline">GUIDELINE</string>
+    <string name="settings_fag">F.A.Q</string>
+    <string name="settings_feedback">FEEDBACK</string>
+    <string name="settings_inviteFriends">INVITE FRIENDS</string>
+    <string name="settings_terms">TERMS &amp; CONDITIONS</string>
+    <string name="settings_privacy">PRIVACY POLICY</string>
+    <string name="settings_watchTour">WATCH TOUR</string>
+
+    <!-- Settings/ Notifications -->
+    <string name="notifications_title">Notifications</string>
+    <string name="notifications_audio">Active Audio Notification</string>
+    <string name="notifications_comment">Active Comment Notification</string>
+    <string name="notifications_all">Active All Notifications</string>
+
+    <!-- Settings/ My Purchase -->
+    <string-array name="purchase_category">
+        <item>MARKS</item>
+        <item>EFFECTS</item>
+    </string-array>
+    <string name="purchase_title">My Purchases</string>
+    <string name="purchase_getMore">GET MORE MASK AND EFFECTS</string>
+
+    <!-- Settings/ Feedback -->
+    <string name="feedback_title">Feedback</string>
+    <string name="feedback_privacy">Privacy Policy</string>
+    <string name="feedback_terms">Terms &amp; Conditions</string>
+    <string name="feedback_consult">Consult our</string>
+    <string name="feedback_hint">Describe your problem or share your ideas...</string>
+
+    <!-- Settings/ Change Number -->
+    <string name="changeNum_title">Change Number</string>
+    <string name="changeNum_content1">Change your phone number will\n migrate your info and products</string>
+    <string name="changeNum_content2">Before proceeding, please confirm that\n you are able to receive SMS or calls at\n your new number.</string>
+    <string name="changeNum_content3">If you have both a new phone and a new\n number, first change your number on\n your old phone.</string>
+    <string name="changeNum_content4">Please enter your old country\n code and phone number:</string>
+    <string name="changeNum_content5">Please enter your new country\n code and phone number:</string>
+    <string name="changeNum_content6">We have sent you an SMS with a code to the\n number above</string>
+    <string name="changeNum_content7">To complete your phone number verification,\n please enter the 7-digit activation code</string>
+    <string name="changeNum_resend">RESEND CODE IN</string>
+    <string name="changeNum_call">CALL ME IN</string>
+    <string name="changeNum_loading_Title">Verifying number...</string>
+
+    <!-- Store (Stripe) -->
+    <string name="store_earn">EARN FREE MASKS AND EFFECTS</string>
+    <string name="store_achieve_title">Achievements</string>
+    <string name="store_achieve_if">If you invite</string>
+    <string name="store_achieve_10_friends">10 friends</string>
+    <string name="store_achieve_25_friends">25 friends</string>
+    <string name="store_achieve_get">you will get</string>
+    <string name="store_achieve_earn1">A Random Free Effect</string>
+    <string name="store_achieve_earn2">A Random Free Mask &amp; Effect</string>
+    <string name="store_achieve_gotit">got it</string>
+    <string name="store_achieve_share_title">Share super special link:</string>
+    <string name="store_achieve_share">Share this link to</string>
+    <string name="store_achieve_share_get">and you will get</string>
+    <string name="store_achieve_share_1k">1,000 peoples</string>
+    <string name="store_achieve_share_10k">10,000 peoples</string>
+    <string name="store_achieve_share_50k">50,000 peoples</string>
+    <string name="store_achieve_share_100k">100,000 peoples</string>
+    <string name="store_achieve_share_earn1">A Random Free Effect</string>
+    <string name="store_achieve_share_earn2">A Random Free Mask</string>
+    <string name="store_achieve_share_earn3">A Unique Effect (Just for you!)</string>
+    <string name="store_achieve_share_earn4">A Unique Mask (Just for you!)</string>
+    <string name="store_invite_upper">INVITE FRIENDS</string>
+
+    <string name="store_invite">Invite Friends</string>
+    <string name="store_invite_nofriends">No friends are using Anarko</string>
+    <string name="store_invite_select_all">Select All</string>
+    <string name="store_invite_copy_link">COPY SUPER LINK</string>
+    <string name="store_invite_nobody">Nobody have open your link</string>
+    <string name="store_invite_peoples">people opened your link</string>
+
+    <!--Payment-->
+    <string name="payment_title">Payment Method</string>
+    <string name="payment_google_wallet">Google Wallet</string>
+    <string name="payment_add_card">+ ADD NEW CARD</string>
+    <string name="payment_terms">Your informantion is protected by</string>
+    <string name="payment_stripe">stripe</string>
+    <!--Card-->
+    <string name="payment_card_title">Add a Card</string>
+    <string name="payment_card_buy">BUY</string>
+    <string name="payment_card_sold">SOLD</string>
+    <string name="payment_card_email">Email</string>
+    <string name="payment_card_card">Card</string>
+    <string name="payment_card_cvc">CVC</string>
+    <string name="payment_card_bill_address">Billing Address</string>
+    <string name="payment_card_name">Name</string>
+    <string name="payment_card_address">Address</string>
+    <string name="payment_card_city">City</string>
+    <string name="payment_card_zipCode">Zip Code</string>
+    <string name="payment_card_country">Country</string>
+    <string name="payment_card_error_email">Email address not valid</string>
+    <string name="payment_card_hint_name">Alberto Ramirez</string>
+    <string name="payment_card_hint_address">331 NW 26th St</string>
+    <string name="payment_card_hint_city">Miami</string>
+    <string name="payment_card_hint_zipCode">33127</string>
+    <string name="payment_card_hint_country">United States</string>
+
+
+    <!-- General TopBar String -->
+    <string name="top_cancel">CANCEL</string>
+    <string name="top_done">DONE</string>
+    <string name="top_next">NEXT</string>
+    <string name="top_send">SEND</string>
+
+    <!-- Credit Card -->
+    <string name="CreditCardNumberHelp" />
+    <string name="ExpirationDateHelp">Expiration date (MM/YY)</string>
+    <string name="SecurityCodeHelp">Security code (CVV)</string>
+    <string name="ZipHelp">Zip code of billing address</string>
+    <string name="endingIn">Card ending in </string>
+
+
+    <!--CommentsFragment-->
+    <string name="comments_descripton">description</string>
+    <string name="comments_comment">I really think this video is important because it is a mirror that show us who is the real
+    person to blame... ourselves. This is I think</string>
+    <string name="comments_hash">#monkeybusiness #anarkocity #globalissues \n#michaelmarmot</string>
+    <string name="comments_location">wynwood designed district</string>
+    <string name="comments_comment_hint">Write an anonymous message...</string>
+    <string name="comments_btn_expand">Read More...</string>
+    <string name="comments_btn_collapse"> </string>
+
+    <!-- Capture -->
+    <string name="capture_break_it">Break it!</string>
+    <!-- Preview -->
+    <string name="preview_add_title">Add a title</string>
+    <string name="preview_add_title_hint">Please enter the title</string>
+    <string name="preview_description">Describe What is happening...</string>
+    <string name="preview_hash_tag">#anarko</string>
+    <string name="preview_location_hint">wynwood design district</string>
+    <string name="preview_save">SAVE</string>
+    <string name="preview_share">SHARE</string>
+
+    <!--Upload-->
+    <string name="upload_try_againg">TRY AGAIN</string>
+    <!--Timeline-->
+    <string name="timeline_search">Search what is happening</string>
+    <string name="timeline_search_hint">CITIES, #HASHTAGS or WORDS</string>
+    <string name="timeline_no_internet_connection">NO INTERNET CONNECTION</string>
+    <string name="timeline_try_again">TRY AGAIN</string>
+    <string name="timeline_related_videos">NOW WATCH\nRELATED VIDEOS ▶</string>
+
+    <!--ReportFragment-->
+    <string name="report_title">Report this video</string>
+    <string name="report_terms">Flagged videos are reviewed by Anarko staff 24 hours a day, seven days a week to determinate
+    whether they violate our Community Guidelines.</string>
+    <string name="report_content1">Sexual Content</string>
+    <string name="report_content2">Violent or repulsive content</string>
+    <string name="report_content3">Hateful or abusive content</string>
+    <string name="report_content4">Harmful dangerous acts</string>
+    <string name="report_content5">Child abuse</string>
+    <string name="report_content6">Spam or misleading</string>
+    <string name="report_content7">Other</string>
+    <string name="report_alert_content">What are you reporting about this video?</string>
+    <string name="report_alert_hint">Tell us what is wrong...</string>
+    <string name="report_send">Send</string>
+    <string name="report_cancel">Cancel</string>
+
+    <!--ShareDialog-->
+    <string name="share_dlg_title">Share your Anarko</string>
+    <string name="share_dlg_actions">ACTIONS</string>
+    <string name="share_dlg_cancel">CANCEL</string>
+    <string name="share_dlg_done">DONE</string>
+    <!--**************************************************************************-->
+
+</resources>

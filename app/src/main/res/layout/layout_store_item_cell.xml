@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/item_storePurchases"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:background="@mipmap/icon_store"/>
+
+            <ImageView
+                android:id="@+id/item_store_imageView"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"/>
+
+        </FrameLayout>
+
+        <com.oppous.anarko.classes.AKTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="test"
+            android:textAlignment="center"
+            android:textColor="@color/colorAKText"
+            android:textSize="@dimen/textsize_12"
+            android:layout_marginLeft="10px"
+            android:layout_marginRight="10px"
+            android:id="@+id/item_store_lblName"
+            app:font_name="@string/font_roboto"/>
+
+    </LinearLayout>
+
+</LinearLayout>

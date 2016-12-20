@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAKBackground"
+    tools:context=".RegVerifyActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        // Top
+        <LinearLayout
+            android:id="@+id/activity_phoneverify_layoutTop"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/activity_phoneverify_layoutRedAlert"
+                android:layout_marginTop="-2dp"
+                android:gravity="center">
+
+                <com.oppous.anarko.classes.AKTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/activity_phoneverify_lblRedAlert"
+                    android:text="@string/verify_wrongCode"
+                    android:textColor="@color/colorAKText"
+                    android:gravity="center"
+                    android:background="@color/colorAKRed"
+                    app:font_name="fonts/gunplay.ttf"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/activity_tour_img_logo"
+                    android:src="@mipmap/icon_splash" />
+
+                <com.oppous.anarko.classes.AKTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/appName"
+                    android:textColor="@color/colorAKText"
+                    android:id="@+id/activity_phoneverify_lblAppname"
+                    android:textIsSelectable="false"
+                    android:textSize="@dimen/textsize_42pt"
+                    android:layout_marginTop="20dp"
+                    android:shadowColor="@color/colorAKShadow"
+                    android:shadowRadius="10"
+                    app:font_name="@string/font_gunplay"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0dp"
+                android:gravity="bottom|center_horizontal"
+                >
+                <com.oppous.anarko.classes.AKTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/verify_human"
+                    android:textSize="@dimen/textsize_14"
+                    android:id="@+id/activity_phoneverify_lblVerify"
+                    android:textColor="@color/colorAKText"
+                    android:shadowColor="@color/colorAKShadow"
+                    android:shadowRadius="10"
+                    app:font_name="@string/font_roboto"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        // Middle
+        <FrameLayout
+            android:id="@+id/activity_phoneverify_layoutMiddle"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_weight="0.2">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_weight="4.0"
+                >
+
+            </LinearLayout>
+
+            <!--Country Code and Phone number -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal|top"
+                android:layout_weight="0.5"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/activity_phoneverify_imgCountryFlag"
+                    android:src="@drawable/flag_us"
+                    android:layout_marginTop="5dp"
+                    android:onClick="onCountryFlag" />
+
+                <com.oppous.anarko.classes.AKTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text=" +58 ▾ "
+                    android:id="@+id/activity_phoneverify_lblCountryCode"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/colorAKText"
+                    android:onClick="onCountryFlag"
+                    android:shadowColor="@color/colorAKShadow"
+                    android:shadowRadius="10"
+                    app:font_name="@string/font_gunplay"/>
+
+                <EditText
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text=""
+                    android:textSize="@dimen/textsize_18"
+                    android:inputType="phone"
+                    android:id="@+id/activity_phoneverify_txtPhoneNumber"
+                    android:textColor="@color/colorAKText"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/colorAKLightGrey"
+                    android:shadowColor="@color/colorAKShadow"
+                    android:shadowRadius="10"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/activity_phoneverify_iconCheck"
+                    android:src="@mipmap/icon_correct"
+                    android:layout_marginTop="15dp"
+                    />
+
+            </LinearLayout>
+
+            <com.oppous.anarko.classes.AKTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textsize_44pt"
+                android:text="@string/verify_sendCode"
+                android:id="@+id/activity_phoneverify_btnActiveCode"
+                android:textColor="@color/colorAKButton"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginTop="70dp"
+                app:font_name="@string/font_gunplay"
+                android:onClick="onSendActiveCode"
+                android:shadowColor="@color/colorAKShadow"
+                android:shadowRadius="10"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/activity_phoneverify_layoutResend">
+
+                <com.oppous.anarko.classes.AKTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textsize_44pt"
+                    android:text="03:00"
+                    android:id="@+id/activity_phoneverify_lblResendTime"
+                    android:textColor="@color/colorAKButton"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginTop="90dp"
+                    android:shadowColor="@color/colorAKShadow"
+                    android:shadowRadius="10"
+                    app:font_name="@string/font_gunplay"
+                    android:onClick="onSendActiveCode" />
+
+                <com.oppous.anarko.classes.GridPasswordView
+                    android:id="@+id/activity_phoneverify_txtSMSpswd"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="115dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@drawable/gridpassword_bg"
+                    app:gpvLineColor="@color/colorAKBackground"
+                    app:gpvLineWidth="5dp"
+                    app:gpvTextColor="@color/colorAKText"
+                    app:gpvTextSize="25sp"
+                    app:gpvPasswordLength="7"
+                    app:gpvGridColor="@color/colorAKDarkGrey"/>
+
+                <com.oppous.anarko.classes.AKTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textsize_42pt"
+                    android:text="@string/verify_enterCode"
+                    android:id="@+id/activity_phoneverify_lblEnterActiveCode"
+                    android:textColor="@color/colorAKDarkGrey"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginTop="160dp"
+                    android:onClick="onSendActiveCode"
+                    android:shadowColor="@color/colorAKShadow"
+                    android:shadowRadius="10"
+                    app:font_name="@string/font_gunplay"/>
+
+                <com.oppous.anarko.classes.AKTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textsize_14"
+                    android:text="@string/verify_description"
+                    android:id="@+id/activity_phoneverify_lblAgreeTerms"
+                    android:textColor="@color/colorAKDarkGrey"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginTop="190dp"
+                    android:onClick="onSendActiveCode"
+                    android:shadowColor="@color/colorAKShadow"
+                    android:shadowRadius="10"
+                    app:font_name="@string/font_roboto"/>
+
+            </FrameLayout>
+
+            <com.oppous.anarko.classes.AKTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/verify_noProfile"
+                android:id="@+id/activity_phoneverify_lblNoprofile"
+                android:textColor="@color/colorAKText"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:shadowColor="@color/colorAKShadow"
+                android:shadowRadius="10"
+                app:font_name="@string/font_roboto"/>
+
+            <!--Counrty Picker Search-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:orientation="vertical"
+                android:id="@+id/country_picker_layout"
+                android:background="@color/colorAKText"
+                android:shadowColor="@color/colorAKShadow"
+                android:shadowRadius="10"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/country_code_picker_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:drawableLeft="@drawable/ic_search"
+                    android:hint="@string/search"
+                    android:maxLines="1"
+                    android:shadowColor="@color/colorAKShadow"
+                    android:shadowRadius="10"
+                    />
+
+                <ListView
+                    android:id="@+id/country_code_picker_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_weight="1"
+                    >
+                </ListView>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        // Bottom
+        <LinearLayout
+            android:id="@+id/activity_phoneverify_layoutBottom"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.34">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical|bottom|center_horizontal">
+
+                <com.oppous.anarko.classes.AKTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/verify_terms"
+                    android:id="@+id/activity_phoneverify_btnTerm"
+                    android:layout_marginRight="0dp"
+                    android:textColor="@color/colorAKButton"
+                    android:textSize="@dimen/textsize_44pt"
+                    android:layout_marginBottom="20dp"
+                    android:shadowColor="@color/colorAKShadow"
+                    android:shadowRadius="10"
+                    app:font_name="@string/font_gunplay"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="gridPasswordView">
+
+        <attr name="gpvTextColor" format="color|reference" />
+        <attr name="gpvTextSize" format="dimension" />
+
+        <attr name="gpvLineColor" format="color" />
+        <attr name="gpvGridColor" format="color" />
+        <attr name="gpvLineWidth" format="dimension" />
+
+        <attr name="gpvPasswordLength" format="integer" />
+        <attr name="gpvPasswordTransformation" format="string" />
+
+        <attr name="gpvPasswordType" format="enum">
+            <enum name="numberPassword" value="0" />
+            <enum name="textPassword" value="1" />
+            <enum name="textVisiblePassword" value="2" />
+            <enum name="textWebPassword" value="3" />
+        </attr>
+
+    </declare-styleable>
+
+    <declare-styleable name="CircleProgressView">
+        <attr name="colorProgress" format="color" />
+        <attr name="colorDone" format="color" />
+        <attr name="colorWrong" format="color" />
+        <attr name="colorBaseFill" format="color" />
+        <attr name="colorBaseStroke" format="color" />
+        <attr name="colorWrongStroke" format="color" />
+        <attr name="progress" format="integer" />
+        <attr name="strokeWidth" format="integer" />
+        <attr name="progressPeriodMills" format="integer" />
+        <attr name="startProgressPosition" format="integer" />
+        <attr name="fullProgressPosition" format="integer" />
+        <attr name="style" format="integer" />
+        <attr name="shouldInit" format="boolean" />
+        <attr name="isInError" format="boolean" />
+        <attr name="duration" format="integer" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/colorAKBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="left|center_horizontal|center_vertical">
+
+        <com.oppous.anarko.classes.AKTextView
+            android:id="@+id/layout_payMethod_imgCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:padding="5dp"
+            android:text="@string/payment_add_card"
+            android:textSize="@dimen/textsize_42pt"
+            android:textColor="@color/colorAKButton"
+            app:font_name="@string/font_gunplay"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

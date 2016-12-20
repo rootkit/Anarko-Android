@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CamPreviewActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/imageView"-->
+            <!--android:src="@drawable/background_portrait"-->
+            <!--android:scaleType="centerCrop" />-->
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/activity_preview_btn_title"
+            android:src="@mipmap/btn_title"
+            android:layout_gravity="center_vertical|right"
+            android:onClick="onTitle" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/activity_preview_container_description"
+        android:background="@color/colorAKDeactiveElement"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/activity_preview_txt_description"
+                android:textColor="@color/colorAKText"
+                android:textSize="@dimen/textsize_20"
+                android:hint="@string/preview_description"
+                android:layout_marginBottom="10dp"
+                android:background="@android:color/transparent" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorAKLineGrey"></LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="#anarko"
+                    android:id="@+id/textView3"
+                    android:textColor="@color/colorAKDarkGrey"
+                    android:textSize="@dimen/textsize_16" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="#"
+                    android:id="@+id/textView17"
+                    android:textColor="@color/colorAKText"
+                    android:textSize="@dimen/textsize_16" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/activity_preview_txt_hash"
+                    android:textColor="@color/colorAKText"
+                    android:textSize="@dimen/textsize_16"
+                    android:background="@android:color/transparent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorAKLineGrey"></LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/preview_location_hint"
+                android:id="@+id/activity_preview_label_location"
+                android:textSize="@dimen/textsize_16"
+                android:textColor="@color/colorAKDarkGrey" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/activity_preview_btn_cancel"
+        android:src="@mipmap/btn_cancel_record"
+        android:layout_gravity="top|center_vertical"
+        android:onClick="onCancel"
+        android:nestedScrollingEnabled="false"
+        android:layout_margin="10dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/activity_preview_btn_explorer"
+        android:src="@mipmap/btn_logo"
+        android:layout_gravity="top|center"
+        android:layout_margin="10dp"
+        android:onClick="onExplorer" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="right"
+        android:layout_margin="10dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/preview_save"
+            android:id="@+id/activity_preview_btn_save"
+            android:background="@color/colorAKNoAlpha"
+            android:textSize="@dimen/textsize_18"
+            android:textColor="@color/colorAKText"
+            android:onClick="onSave"
+            android:shadowColor="@color/colorAKShadow"
+            android:shadowRadius="10"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:background="@color/colorAKDeactiveElement"
+        android:id="@+id/activity_preview_container_addtitle">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/preview_add_title"
+                android:id="@+id/activity_preview_btn_addtitle"
+                android:textColor="@color/colorAKText"
+                android:onClick="onAddTitle"
+                android:shadowColor="@color/colorAKShadow"
+                android:shadowRadius="10"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/activity_preview_txt_title"
+                android:textSize="@dimen/textsize_20"
+                android:textColor="@color/colorAKText"
+                android:hint="@string/preview_add_title_hint"
+                android:background="@android:color/transparent"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>
